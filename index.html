@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bond & Paw | Human-Pet Fashion Apparel | Cross-border Pet Clothing Brand</title>
+    <!-- 引入字体图标库 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 核心样式 -->
+    <style>
+        :root {
+            --primary-light: #F8F5F0;
+            --primary-dark: #3D405B;
+            --accent-orange: #E07A5F;
+            --accent-green: #81B29A;
+            --accent-gold: #F2CC8F;
+            --neutral-gray: #E0E0E0;
+            --text-dark: #333333;
+            --text-light: #FFFFFF;
+            --accent-red: #C92A2A; /* New Year theme red */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--primary-light);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-orange);
+        }
+        
+        .section-title-center h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        h3 {
+            font-size: 1.6rem;
+            color: var(--accent-orange);
+        }
+        
+        .handwritten {
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-orange);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--accent-orange);
+            color: var(--accent-orange);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--accent-orange);
+            color: white;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary-dark);
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            margin-right: 10px;
+            color: var(--accent-orange);
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .logo-text span {
+            font-family: 'Dancing Script', cursive;
+            font-weight: 500;
+            color: var(--accent-orange);
+            margin-left: 5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-orange);
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-orange);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .nav-icons {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-icons i {
+            margin-left: 20px;
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-icons i:hover {
+            color: var(--accent-orange);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(rgba(248, 245, 240, 0.9), rgba(248, 245, 240, 0.9)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1927&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+        }
+        
+        .hero-text h1 {
+            margin-bottom: 20px;
+        }
+        
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--text-dark);
+        }
+        
+        .hero-text div {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        /* Core Values */
+        .core-values {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title-center {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .values-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .value-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--primary-light);
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+        
+        .value-icon {
+            font-size: 3rem;
+            color: var(--accent-orange);
+            margin-bottom: 20px;
+        }
+        
+        .value-card h3 {
+            margin-bottom: 15px;
+        }
+        
+        /* Products */
+        .products {
+            padding: 80px 0;
+            background-color: var(--primary-light);
+        }
+        
+        .product-categories {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .category-btn {
+            padding: 10px 25px;
+            background-color: white;
+            border: 2px solid var(--neutral-gray);
+            border-radius: 30px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .category-btn.active, .category-btn:hover {
+            background-color: var(--accent-orange);
+            color: white;
+            border-color: var(--accent-orange);
+        }
+        
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Preserve image aspect ratio */
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-info {
+            padding: 25px;
+        }
+        
+        .product-category {
+            display: inline-block;
+            padding: 5px 15px;
+            background-color: var(--accent-red); /* New Year theme red tag */
+            color: white;
+            font-size: 0.8rem;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-orange);
+            margin: 10px 0;
+        }
+        
+        /* Brand Story */
+        .brand-story {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .story-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .story-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .story-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .story-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .story-content p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        /* Blog/Guide */
+        .blog-guide {
+            padding: 80px 0;
+            background-color: var(--primary-light);
+        }
+        
+        .guide-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .guide-main {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .guide-sidebar {
+            flex: 1;
+            min-width: 250px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .guide-article {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        
+        .guide-article img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover; /* Preserve image aspect ratio */
+            transition: transform 0.5s ease;
+        }
+        
+        /* 关键修改：为春节服装文章图片添加向上对齐样式 */
+        .guide-article.chinese-new-year img {
+            object-position: top; /* 图片向上对齐，露出狗头 */
+        }
+        
+        /* 关键修改：增加内容区域的顶部内边距，实现"往下拉"的效果 */
+        .guide-article-content {
+            /* padding-top从30px调整为50px，可根据需求修改数值 */
+            padding: 50px 30px 30px; 
+        }
+        
+        .guide-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            color: var(--accent-red); /* New Year theme red indicator */
+            font-weight: 600;
+        }
+        
+        .sidebar-title {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--neutral-gray);
+        }
+        
+        .sidebar-links {
+            list-style: none;
+        }
+        
+        .sidebar-links li {
+            margin-bottom: 15px;
+        }
+        
+        .sidebar-links a {
+            text-decoration: none;
+            color: var(--primary-dark);
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--neutral-gray);
+            transition: color 0.3s ease;
+        }
+        
+        .sidebar-links a:hover {
+            color: var(--accent-orange);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-column h3 {
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--neutral-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--accent-orange);
+            transform: translateY(-5px);
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin: 40px 0;
+        }
+        
+        .badge {
+            text-align: center;
+        }
+        
+        .badge i {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+        
+        .copyright {
+            text-align: center;
+            color: var(--neutral-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .value-card {
+                min-width: 100%;
+            }
+        }
+        
+        /* Animation */
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        /* Size Guide Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal {
+            background-color: white;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 40px;
+            position: relative;
+            transform: translateY(30px);
+            transition: transform 0.3s ease;
+        }
+        
+        .modal-overlay.active .modal {
+            transform: translateY(0);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: var(--accent-orange);
+        }
+        
+        .size-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .size-table th, .size-table td {
+            border: 1px solid var(--neutral-gray);
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .size-table th {
+            background-color: var(--primary-light);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo"> 
+                <div class="logo-icon">🐾</div>
+                <div class="logo-text">Bond<span>& Paw</span></div>
+            </a> 
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i> 
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#festival">Holiday Collection</a></li>
+                <li><a href="#matching">Human-Pet Matching</a></li>
+                <li><a href="#size-guide" id="sizeGuideLink">Size Guide</a></li>
+                <li><a href="#story">Brand Story</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fas fa-search"></i> 
+                <i class="fas fa-user"></i> 
+                <i class="fas fa-shopping-bag"></i> 
+                <select style="margin-left: 15px; padding: 5px; border: 1px solid #ddd; border-radius: 4px;">
+                    <option value="en">EN</option>
+                    <option value="de">DE</option>
+                    <option value="fr">FR</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-text fade-in">
+                <h1>Style Together, <span class="handwritten">Stay Together</span></h1>
+                <p>Create timeless memories for every special moment. Bond & Paw specializes in high-quality pet apparel that combines functionality with stylish design, making you and your furry friend shine on any occasion.</p>
+                <div>
+                    <a href="#products" class="btn" style="width: auto;">Explore Products</a> 
+                    <a href="#size-guide" class="btn btn-outline" id="sizeGuideBtn" style="width: auto;">Size Measurement Guide</a> 
+                </div>
+            </div>
+            <div class="hero-image fade-in">
+                <img src="https://ts3.tc.mm.bing.net/th/id/OIP-C.cqOpANvqa_ini0xTkMtl5QHaEs?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Pet clothing benefits and drawbacks">
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="core-values">
+        <div class="container">
+            <div class="section-title-center fade-in">
+                <h2>Our Core Values</h2>
+                <p>Blending emotion, functionality and fashion to create precious moments shared between humans and pets</p>
+            </div>
+            <div class="values-container">
+                <div class="value-card fade-in">
+                    <div class="value-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Human-Pet Integration</h3>
+                    <p>The trend of "parent-child outfits" and "couple outfits" continues to grow, with pet clothing becoming a display of the owner's lifestyle and emotional bond. Our human-pet matching collection allows you to share the joy of fashion with your furry companion.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <div class="value-icon">🧧</div>
+                    <h3>Holiday Rituals</h3>
+                    <p>More and more pet owners prepare New Year costumes for their pets during Chinese New Year. Chinese New Year, pet birthdays and other special occasions are key consumption moments. Our holiday collection makes every Spring Festival celebration a warm and unforgettable memory.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <div class="value-icon">🛡️</div>
+                    <h3>Safety & Functional Design</h3>
+                    <p>All products feature eco-friendly fabrics, button-free safety design, reflective strips and other safety features. We prioritize pet safety while ensuring comfort and style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title-center fade-in">
+                <h2>Featured Product Collection</h2>
+                <p>Professional designs for different scenarios and needs</p>
+            </div>
+            <div class="product-categories fade-in">
+                <button class="category-btn active" data-category="all">All Products</button>
+                <button class="category-btn" data-category="functional">Functional Outdoor</button>
+                <button class="category-btn" data-category="festival">Holiday Theme</button>
+                <button class="category-btn" data-category="matching">Human-Pet Matching</button>
+            </div>
+            <div class="products-container">
+                <!-- Product 1: All-Weather Protective Jacket -->
+                <div class="product-card fade-in" data-category="functional">
+                    <div class="product-image">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/7e6c50ca00f0427d807255c91da9c044.jpg~tplv-a9rns2rl98-image.png?rcl=2025122415354351FEF5BE6A5F57B277CD&rk3s=8e244e95&rrcfp=dafada99&x-expires=2082785744&x-signature=Osefti5sLOSMBvTss%2F%2F5mFf8w3s%3D" alt="Shiba Inu wearing all-weather protective jacket" /> 
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Flagship Product</span> 
+                        <h3>All-Weather Protective Jacket</h3>
+                        <p>Made with waterproof and breathable recycled polyester, featuring reflective strips, adjustable waist and neck circumference, perfect for outdoor activities.</p>
+                        <div class="product-price">$45 - $75</div>
+                        <a href="#" class="btn">View Details</a> 
+                    </div>
+                </div>
+                <!-- Product 2: Chinese New Year Tang Suit -->
+                <div class="product-card fade-in" data-category="festival">
+                    <div class="product-image">
+                        <img src="https://img.alicdn.com/i4/2206626551141/O1CN01Z8FXxD1KIcdSLFjoi_!!2206626551141.jpg" alt="Chinese New Year Tang Suit for pets" />
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">LNY Limited Edition</span> 
+                        <h3>Chinese New Year Tang Suit</h3>
+                        <p>Traditional brocade fabric with fleece lining for warmth and comfort. Red cloud patterns symbolize good fortune, making it a standout outfit for family gatherings and New Year visits.</p>
+                        <div class="product-price">$38 - $58</div>
+                        <a href="#" class="btn">View Details</a> 
+                    </div>
+                </div>
+                <!-- Product 3: Human-Pet Matching Hoodies -->
+                <div class="product-card fade-in" data-category="matching">
+                    <div class="product-image">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/ea654ab04557425db526879853996bc9.png~tplv-a9rns2rl98-image.png?rcl=2025122415354351FEF5BE6A5F57B277CD&rk3s=8e244e95&rrcfp=dafada99&x-expires=2082785744&x-signature=KX29ajb21sHQCW4UO3aUHTHgcI0%3D" alt="Woman and French Bulldog wearing matching black hoodies" /> 
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Best Seller</span> 
+                        <h3>Human-Pet Matching Hoodies</h3>
+                        <p>Minimalist design with organic cotton fabric, offering matching designs for owners and pets to build emotional connections and social sharing.</p>
+                        <div class="product-price">
+                            Pet Size $25 - $35<br />
+                            Human Size $40 - $60
+                        </div>
+                        <a href="#" class="btn">View Details</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Story Section -->
+    <section class="brand-story" id="story">
+        <div class="container">
+            <div class="section-title-center fade-in">
+                <h2>Our Brand Story</h2>
+                <p>We believe every outfit is an expression of emotion</p>
+            </div>
+            <div class="story-container fade-in">
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Brand founder with pet" /> 
+                </div>
+                <div class="story-content">
+                    <h3>Our Mission</h3>
+                    <p>Bond & Paw was born from a simple belief: pets are not just pets, but cherished members of the family. We are committed to creating pet apparel that is both stylish and functional, turning every moment spent with your pet into a beautiful memory.</p>
+                    <h3>Our Advantages</h3>
+                    <p>Clear product differentiation: We avoid the highly competitive fast-fashion basic styles and focus on functional outdoor wear and holiday-themed apparel with high emotional value. This "small but exquisite" positioning accurately targets niche markets with specific needs.</p>
+                    <p>Strong control with DTC model: Through our brand independent website, we fully control brand image, user data and customer relationships, avoiding platform restrictions and price competition, building high profit margins and high customer lifetime value.</p>
+                    <p>Strong marketing content and community focus: We are driven by content and community engagement, using visual social media platforms like Instagram and TikTok to tell our brand story and showcase product scenarios, effectively acquiring customers at low cost and building brand loyalty.</p>
+                    <a href="#" class="btn" style="width: auto;">Learn More</a> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog/Guide Section -->
+    <section class="blog-guide" id="blog">
+        <div class="container">
+            <div class="section-title-center fade-in">
+                <h2>Pet Apparel Guide</h2>
+                <p>Professional content to help you make the best choices</p>
+            </div>
+            <div class="guide-container">
+                <div class="guide-main">
+                    <div class="guide-article fade-in">
+                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80" alt="Measuring pet size" /> 
+                        <div class="guide-article-content">
+                            <div class="guide-meta">
+                                <span><i class="fas fa-ruler-combined"></i> Size Guide</span> 
+                                <span><i class="far fa-clock"></i> 5 min read</span> 
+                            </div>
+                            <h3>How to Measure Your Pet Accurately - Reduce Return Rate in 5 Minutes</h3>
+                            <p>Size issues are the main reason for pet clothing returns. Follow our professional guide to ensure you choose the perfect fit for your furry friend.</p>
+                            <a href="#" class="btn" style="width: auto;">Read Full Article</a> 
+                        </div>
+                    </div>
+                    <!-- Chinese New Year Pet Costume Guide -->
+                    <!-- 关键修改：添加 chinese-new-year 类名 -->
+                    <div class="guide-article fade-in chinese-new-year">
+                        <img src="https://img.alicdn.com/i2/2655927265/O1CN011Jqjm523XQ8urXAF9_!!2655927265.jpg" alt="Chinese New Year pet costumes" />
+                        <div class="guide-article-content">
+                            <div class="guide-meta">
+                                <span><i class="fas fa-red-envelope"></i> LNY Inspiration</span> 
+                                <span><i class="far fa-clock"></i> 8 min read</span> 
+                            </div>
+                            <h3>Complete Guide to Chinese New Year Pet Costumes: 2025's Most Popular LNY Looks</h3>
+                            <p>Surveys show that more and more pet owners prepare New Year costumes for their pets during Spring Festival. Explore this season's most popular pet costume trends and safety tips.</p>
+                            <a href="#" class="btn" style="width: auto;">Read Full Article</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="guide-sidebar fade-in">
+                    <h3 class="sidebar-title">Quick Guides</h3>
+                    <ul class="sidebar-links">
+                        <li><a href="#"><i class="fas fa-paw"></i> Pet Dressing Guide for Different Climates</a></li>
+                        <li><a href="#"><i class="fas fa-tshirt"></i> How to Choose the Right Fabric for Your Pet</a></li>
+                        <li><a href="#"><i class="fas fa-camera"></i> Chinese New Year Pet Photo Pose Ideas</a></li>
+                        <li><a href="#"><i class="fas fa-recycle"></i> Eco-Friendly Fabrics and Sustainability</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Understanding Pet Apparel Safety Standards</a></li>
+                        <li><a href="#"><i class="fas fa-truck"></i> International Shipping & Return Policy</a></li>
+                    </ul>
+                    <div style="padding:20px;background-color:var(--primary-light);border-radius: 8px;margin-top: 30px;">
+                        <h4>Download Resources</h4>
+                        <p>Get our professional guides for free</p>
+                        <a href="#" class="btn"><i class="fas fa-download"></i> Pet Size Measurement Chart</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="trust-badges fade-in">
+                <div class="badge">
+                    <i class="fas fa-award"></i> 
+                    <p>Safety Certified</p>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-leaf"></i> 
+                    <p>Eco-Friendly Materials</p>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-shipping-fast"></i> 
+                    <p>Global Shipping</p>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-undo"></i> 
+                    <p>30-Day Returns</p>
+                </div>
+            </div>
+            <div class="footer-container fade-in">
+                <div class="footer-column">
+                    <h3>Bond & Paw</h3>
+                    <p style="color:var(--neutral-gray);margin-bottom: 20px;">Style Together, Stay Together</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a> 
+                        <a href="#"><i class="fab fa-tiktok"></i></a> 
+                        <a href="#"><i class="fab fa-facebook-f"></i></a> 
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a> 
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Product Collections</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Functional Outdoor Collection</a></li>
+                        <li><a href="#">Holiday Theme Collection</a></li>
+                        <li><a href="#">Human-Pet Matching Collection</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Limited Edition Designs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Shipping Information</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Brand Story</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Career Opportunities</a></li>
+                        <li><a href="#">Wholesale Partnership</a></li>
+                        <li><a href="#">Media Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright fade-in">
+                <p>&copy; 2023 Bond & Paw. All rights reserved. | Privacy Policy | Terms of Service</p>
+                <p style="font-size:0.8rem;margin-top: 10px;">Cross-border Pet Apparel Independent Website - Focus on Human-Pet Integrated Fashion and Holiday Rituals</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Size Guide Modal -->
+    <div class="modal-overlay" id="sizeGuideModal">
+        <div class="modal">
+            <div class="close-modal" id="closeModal">×</div>
+            <h2>Pet Size Measurement Guide</h2>
+            <p>Accurately measuring your pet is crucial to ensure proper clothing fit. Please follow these steps:</p>
+            <h3>Measurement Steps</h3>
+            <ol style="margin-left:20px;margin-bottom: 20px;">
+                <li><strong>Back Length:</strong> Length from the base of the neck (collar position) to the base of the tail</li>
+                <li><strong>Chest Girth:</strong> Circumference of the widest part behind the front legs</li>
+                <li><strong>Neck Girth:</strong> Circumference of the thickest part of the neck</li>
+                <li><strong>Weight:</strong> Accurate weight helps with size recommendations</li>
+            </ol>
+            <h3>Size Chart (Dogs)</h3>
+            <table class="size-table">
+                <thead>
+                    <tr>
+                        <th>Size</th>
+                        <th>Back Length (cm)</th>
+                        <th>Chest Girth (cm)</th>
+                        <th>Neck Girth (cm)</th>
+                        <th>Weight Range (kg)</th>
+                        <th>Suitable Breeds (Examples)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>XS</td>
+                        <td>20-25</td>
+                        <td>30-35</td>
+                        <td>20-25</td>
+                        <td>1-3</td>
+                        <td>Chihuahua, Yorkshire Terrier</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>25-35</td>
+                        <td>35-45</td>
+                        <td>25-30</td>
+                        <td>3-6</td>
+                        <td>Poodle, Dachshund</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>35-45</td>
+                        <td>45-55</td>
+                        <td>30-35</td>
+                        <td>6-12</td>
+                        <td>Beagle, Corgi</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>45-55</td>
+                        <td>55-65</td>
+                        <td>35-40</td>
+                        <td>12-20</td>
+                        <td>Border Collie</td>
+                    </tr>
+                    <tr>
+                        <td>XL</td>
+                        <td>55-65</td>
+                        <td>65-75</td>
+                        <td>40-45</td>
+                        <td>20-30</td>
+                        <td>Labrador, Golden Retriever</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="padding:20px;background-color:var(--primary-light);border-radius: 8px;margin-top: 30px;">
+                <h4>Important Notes</h4>
+                <p>Different breeds have different body proportions, so sizes may vary even with the same weight. If in doubt, refer to our interactive size assistant or contact customer service for personalized recommendations.</p>
+                <a href="#" class="btn" style="width: auto;margin-top: 15px;"><i class="fas fa-download"></i> Download Printable Measurement Guide</a> 
+            </div>
+        </div>
+    </div>
+
+    <!-- 交互脚本 -->
+    <script>
+        // 移动端菜单切换
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // 产品分类筛选
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        const productCards = document.querySelectorAll('.product-card');
+        
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const category = btn.getAttribute('data-category');
+                
+                productCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // 尺寸指南弹窗
+        const sizeGuideModal = document.getElementById('sizeGuideModal');
+        const sizeGuideLinks = document.querySelectorAll('#sizeGuideLink, #sizeGuideBtn');
+        const closeModal = document.getElementById('closeModal');
+        
+        sizeGuideLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                sizeGuideModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        closeModal.addEventListener('click', () => {
+            sizeGuideModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // 点击弹窗外区域关闭
+        sizeGuideModal.addEventListener('click', (e) => {
+            if (e.target === sizeGuideModal) {
+                sizeGuideModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
